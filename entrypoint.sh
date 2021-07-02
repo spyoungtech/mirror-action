@@ -70,6 +70,6 @@ else
         echo "FATAL: You must upgrade to using actions inputs instead of args: to push a single branch" > /dev/stderr
         exit 1
     else
-        eval git push -u ${GIT_PUSH_ARGS} mirror
+        eval git push -u ${GIT_PUSH_ARGS} mirror "${GITHUB_REF}"
     fi
 fi
